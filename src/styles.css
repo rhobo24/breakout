@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #0a0a0c;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.game-frame {
+  position: relative;
+  line-height: 0;
+}
+
+.game-canvas {
+  height: min(88vh, 1000px);
+  width: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  cursor: none;
+  touch-action: none;
+  box-shadow: 0 0 60px rgba(104, 68, 252, 0.25);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.72);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: clamp(28px, 6vh, 52px);
+  letter-spacing: 0.22em;
+  color: #f8d800;
+  text-shadow: 0 0 18px rgba(248, 216, 0, 0.5);
+}
+
+.overlay p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.overlay .final-score {
+  color: #fff;
+  font-size: 20px;
+}
+
+.overlay kbd {
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+
+.overlay button {
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  padding: 10px 26px;
+  background: #d82800;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #f8d800;
+  color: #000;
+}
+
+.hint {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
